@@ -2,7 +2,7 @@ import "./FourZeroFour.scss";
 
 const FourZeroFour = () => {
   const starArr = new Array(100).fill(0, 0, 99);
-  const starsHTML = starArr.map((star) => (
+  const starsHTML = starArr.map((star, idx) => (
     <div
       className="star"
       style={{
@@ -15,9 +15,15 @@ const FourZeroFour = () => {
           Math.random() * 15
         }s linear infinite`,
       }}
-      key={star}
+      key={idx}
     ></div>
   ));
+
+  const loadHome = () => {
+    console.log(window.parent);
+    if (window.location !== window.parent.location) {
+    }
+  };
 
   return (
     <div className="fourohfour-container">
@@ -37,7 +43,7 @@ const FourZeroFour = () => {
         </div>
         <div className="just-space">NO PAGE HERE, JUST SPACE</div>
         <div className="go-home">
-          <a href="/">GO HOME?</a>
+          <div onClick={loadHome}>GO HOME?</div>
         </div>
       </div>
       <div className="spaceship-container">

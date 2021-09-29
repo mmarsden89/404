@@ -130,13 +130,13 @@ $darkgray: #222121;
   cursor: pointer;
 }
 
-.go-home > a {
+.go-home > div {
   color: white;
   text-decoration: none;
   transition: 0.5s;
 }
 
-.go-home > a:hover {
+.go-home > div:hover {
   color: darken(white, 60%);
 }
 
