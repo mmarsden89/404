@@ -25,6 +25,7 @@ const FourZeroFour = () => {
       "is this location not equal to parent?",
       window.location !== window.parent.location
     );
+    console.log("current location", window.location);
     if (window.location !== window.parent.location) {
       window.parent.postMessage({ message: "how bout message?" }, "*");
     }
