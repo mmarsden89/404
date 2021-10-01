@@ -20,15 +20,12 @@ const FourZeroFour = () => {
   ));
 
   const loadHome = () => {
-    console.log("are we at least getting here?");
-    console.log(
-      "is this location not equal to parent?",
-      window.location !== window.parent.location
-    );
-    console.log("current location", window.location);
-    if (window.location !== window.parent.location) {
-      window.parent.postMessage({ message: "how bout message?" }, "*");
-    }
+    var url =
+      window.location != window.parent.location
+        ? document.referrer
+        : document.location.href;
+
+    console.log("heres url", url);
   };
 
   return (
