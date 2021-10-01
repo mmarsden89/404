@@ -21,6 +21,10 @@ const FourZeroFour = () => {
 
   const loadHome = () => {
     console.log("are we at least getting here?");
+    console.log(
+      "is this location not equal to parent?",
+      window.location !== window.parent.location
+    );
     if (window.location !== window.parent.location) {
       window.parent.postMessage({ message: "how bout message?" }, "*");
     }
