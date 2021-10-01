@@ -26,6 +26,7 @@ const FourZeroFour = () => {
         : document.location.href;
 
     console.log("heres url", url);
+    window.open(url, "_self");
   };
 
   return (
