@@ -25,7 +25,6 @@ const FourZeroFour = () => {
         ? document.referrer
         : document.location.href;
 
-    console.log("heres url", url);
     window.open(url, "_parent");
   };
 
