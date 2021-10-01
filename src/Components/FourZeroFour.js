@@ -20,11 +20,9 @@ const FourZeroFour = () => {
   ));
 
   const loadHome = () => {
+    console.log("here is parent location", window.parent.location);
     if (window.location !== window.parent.location) {
-      window.parent.postMessage(
-        { message: window.parent.location, hide: "dbhchat", show: "dbhchat" },
-        "*"
-      );
+      window.parent.postMessage({ message: window.parent.location }, "*");
     }
   };
 
